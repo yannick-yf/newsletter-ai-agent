@@ -9,19 +9,22 @@ NBA_WEB_SEARCH_PROMPT_OLD = """
 """
 
 SPORTS_RESULTS_WEB_SEARCH_PROMPT = """
-
+    Provide me a summary of the sports events of {yesterday_date}. Exclude NBA results from this research.
+    Key and core focus on Soccer in Europe (France, England, Spain), and on international sports competitions.
 """
 
 FINAL_SUMMARY_PROMPT = """\
         You are a sports news reporter.
 
-        Your task is to write an article-style summary of the NBA results from yesterday. 
+        Your task is to write an article-style summary of the NBA and Sports event results from yesterday.
+        Create two distinct section: One for NBA results and one for other sports results.
         The output should be formatted in HTML and include the date (yesterday) right after the article title.
 
         Use a journalistic tone suitable for a sports news website.
 
         Yesterday's date: {yesterday_date}
         NBA results: {nba_results}
+        Sports Summary: {sports_summary}
     """
 
 TEMPLATE_HTML = """

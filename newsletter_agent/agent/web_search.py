@@ -25,3 +25,19 @@ def nba_results_web_search_tool():
     output = response.content  
 
     return output
+
+def general_sports_results_web_search_tool():
+
+    yesterday_date = get_date_of_yesterday()
+
+    agent = Agent(
+        model=OpenAILike(
+            id="gpt-4o-mini-search-preview",
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
+    )
+
+    response = agent.run(SPORTS_RESULTS_WEB_SEARCH_PROMPT.format(yesterday_date=yesterday_date))
+    output = response.content  
+
+    return output
