@@ -1,10 +1,13 @@
+"""Main function executing Agentic Workflow and sending email"""
+
 import os
 from dotenv import load_dotenv
 
 from newsletter_agent.utilis.send_email import send_gmail
-from newsletter_agent.utilis.get_email_content import get_html_content
 
 load_dotenv()
+
+from newsletter_agent.agent.output_formating import output_formating
 
 success = send_gmail(
     sender_email=os.getenv('GMAIL_EMAIL'),
@@ -12,5 +15,5 @@ success = send_gmail(
     recipient_email=["ipfy.solutions@gmail.com", 'yannick.flores1992@gmail.com'],
     subject="Email Test",
     body="This is the plain text version.",
-    html_body=get_html_content()
+    html_body=output_formating()
 )

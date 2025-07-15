@@ -1,5 +1,6 @@
-from datetime import datetime, timedelta
+"""Utilis function to get the date of yesterday"""
 
+from datetime import datetime, timedelta
 
 def get_date_of_yesterday():
     # Get yesterday's date
