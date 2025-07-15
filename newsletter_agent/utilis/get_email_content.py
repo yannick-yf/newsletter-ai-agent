@@ -1,4 +1,4 @@
-from get_date import get_date_of_yesterday
+from newsletter_agent.utilis.get_date import get_date_of_yesterday
 
 def get_html_content():
     html_content = f"""
