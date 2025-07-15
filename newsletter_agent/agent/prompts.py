@@ -1,7 +1,15 @@
 """Prompts collection used by the agent"""
 
 NBA_WEB_SEARCH_PROMPT = """
+    Give me the nba games results for the game of {yesterday_date}.
+"""
+
+NBA_WEB_SEARCH_PROMPT_OLD = """
     Give me the nba games results for the game of the 19th of March 2025.
+"""
+
+SPORTS_RESULTS_WEB_SEARCH_PROMPT = """
+
 """
 
 FINAL_SUMMARY_PROMPT = """\

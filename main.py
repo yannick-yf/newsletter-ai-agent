@@ -4,10 +4,9 @@ import os
 from dotenv import load_dotenv
 
 from newsletter_agent.utilis.send_email import send_gmail
+from newsletter_agent.agent.output_formating import output_formating
 
 load_dotenv()
-
-from newsletter_agent.agent.output_formating import output_formating
 
 success = send_gmail(
     sender_email=os.getenv('GMAIL_EMAIL'),
