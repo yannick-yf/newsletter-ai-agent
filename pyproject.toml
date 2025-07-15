@@ -29,6 +29,8 @@ gradio = "*"
 geopy = "*"
 boto3 = "*"
 pytest = "*"
+secure-smtplib = "*"
+python-dotenv = "*"
 
 [build-system]
 requires = ["poetry-core"]
