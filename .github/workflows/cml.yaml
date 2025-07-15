@@ -1,0 +1,29 @@
+name: CML
+
+on:
+  push:
+    branches:
+      - '*'  # Runs on all branches
+  schedule:
+    - cron: '*/5 * * * *'  # Runs every day at 2pm UTC
+  workflow_dispatch:
+jobs:
+  newsletter-ai-agent-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Poetry
+        run: pipx install poetry
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.9"
+          cache: "poetry"
+      - name: Install dependencies
+        run: poetry install --no-root
+      - name: Run AI Agent Newsletter Pipeline
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+        run: |
+          poetry run python main.py
