@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, MagicMock, mock_open
 import smtplib
-from send_email import send_gmail
+from newsletter_agent.utilis.send_email import send_gmail
 
 class TestGmailSender(unittest.TestCase):
     

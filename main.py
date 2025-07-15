@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
 
-from send_email import send_gmail
-from get_email_content import get_html_content
+from newsletter_agent.utilis.send_email import send_gmail
+from newsletter_agent.utilis.get_email_content import get_html_content
 
 load_dotenv()
 
