@@ -10,22 +10,39 @@ NBA_WEB_SEARCH_PROMPT_OLD = """
 
 SPORTS_RESULTS_WEB_SEARCH_PROMPT = """
     Provide me a summary of the sports events of {yesterday_date}. Exclude NBA results from this research.
-    Key and core focus on Soccer in Europe (France, England, Spain), and on international sports competitions.
+    Key and core focus on Soccer in Europe (France, England, Spain), Tennis main competition and all international sports competitions.
 """
 
-FINAL_SUMMARY_PROMPT = """\
-        You are a sports news reporter.
+FINAL_SUMMARY_PROMPT = """
+You are a professional sports journalist writing a daily sports digest.
 
-        Your task is to write an article-style summary of the NBA and Sports event results from yesterday.
-        Create two distinct section: One for NBA results and one for other sports results.
-        The output should be formatted in HTML and include the date (yesterday) right after the article title.
+Create a comprehensive HTML-formatted sports summary for {yesterday_date} with the following structure:
 
-        Use a journalistic tone suitable for a sports news website.
+1. **Article Title**: "Daily Sports Digest - [Date]"
+2. **NBA Section**: 
+    - Summarize all NBA games with scores and key highlights
+    - Include standout player performances
+    - Mention any significant storylines or playoff implications
+3. **International Sports Section**:
+    - Cover European soccer matches and results
+    - Include other major international sports events
+    - Highlight any upsets, records, or significant achievements
 
-        Yesterday's date: {yesterday_date}
-        NBA results: {nba_results}
-        Sports Summary: {sports_summary}
-    """
+**Writing Guidelines**:
+- Use a professional, engaging journalistic tone
+- Keep paragraphs concise but informative
+- Include specific scores, statistics, and player names where relevant
+- Structure with clear HTML headings and formatting
+- Aim for 300-500 words total
+- Focus on the most newsworthy and interesting developments
+
+**Data to incorporate**:
+- Yesterday's date: {yesterday_date}
+- NBA results: {nba_results}
+- Sports summary: {sports_summary}
+
+Format the output as clean HTML suitable for email delivery.
+"""
 
 TEMPLATE_HTML = """
 Template to use
