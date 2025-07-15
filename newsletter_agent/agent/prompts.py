@@ -15,3 +15,32 @@ FINAL_SUMMARY_PROMPT = """\
         Yesterday's date: {yesterday_date}
         NBA results: {nba_results}
     """
+
+TEMPLATE_HTML = """
+Template to use
+```html
+NBA Results Summary - 14/07/2025
+Yesterday's NBA action featured several thrilling matchups, showcasing both exciting finishes and standout performances across the league.
+
+Game Results from March 19, 2025
+Mavericks (DAL) @ Pacers (IND): Final Score - DAL 131, IND 135
+Rockets (HOU) @ Magic (ORL): Final Score - HOU 116, ORL 108
+Pistons (DET) @ Heat (MIA): Final Score - DET 116, MIA 113
+76ers (PHI) @ Thunder (OKC): Final Score - PHI 100, OKC 133
+Knicks (NYK) @ Spurs (SAS): Final Score - NYK 105, SAS 120
+Pelicans (NOP) @ Timberwolves (MIN): Final Score - NOP 119, MIN 115
+Wizards (WAS) @ Jazz (UTA): Final Score - WAS 112, UTA 128
+Grizzlies (MEM) @ Trail Blazers (POR): Final Score - MEM 99, POR 115
+Bulls (CHI) @ Suns (PHX): Final Score - CHI 121, PHX 127
+Cavaliers (CLE) @ Kings (SAC): Final Score - CLE 119, SAC 123
+Nuggets (DEN) @ Lakers (LAL): Final Score - DEN 108, LAL 120
+Notable Performances
+Devin Booker of the Phoenix Suns scored 41 points, leading his team to a 127-121 victory over the Chicago Bulls. Read More
+Cade Cunningham of the Detroit Pistons secured a triple-double with 25 points, 12 rebounds, and 11 assists, including a game-winning 3-pointer with 0.6 seconds left in a 116-113 win over the Miami Heat. Read More
+Aaron Wiggins of the Oklahoma City Thunder led his team with 26 points in a decisive 133-100 win over the Philadelphia 76ers, clinching the Northwest Division title for the Thunder. Read More
+Ivica Zubac of the Los Angeles Clippers celebrated his 28th birthday with a double-double, scoring 28 points and pulling down 20 rebounds in a 132-119 victory over the Cleveland Cavaliers. Read More
+Jimmy Butler III of the Golden State Warriors contributed 24 points, 8 rebounds, and 10 assists, leading his team to a 104-93 win over the Milwaukee Bucks. Read More
+These performances highlight the competitive nature of the league as teams continue to vie for playoff positioning, setting the stage for an exciting conclusion to the regular season.
+
+```
+"""

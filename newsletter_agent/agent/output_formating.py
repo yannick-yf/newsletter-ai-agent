@@ -1,7 +1,6 @@
 """Agent Tool summerizing information gather by agent tools"""
 
-from os import getenv
-from agno.agent import Agent, RunResponse
+from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 
 import os
@@ -9,7 +8,7 @@ from dotenv import load_dotenv
 
 from textwrap import dedent
 
-from newsletter_agent.agent.prompts import NBA_WEB_SEARCH_PROMPT, FINAL_SUMMARY_PROMPT
+from newsletter_agent.agent.prompts import FINAL_SUMMARY_PROMPT
 from newsletter_agent.agent.web_search import agent_web_search
 from newsletter_agent.utilis.get_date import get_date_of_yesterday
 

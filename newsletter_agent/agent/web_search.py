@@ -1,14 +1,12 @@
 """Agent Tool performing Web Search"""
 
-from os import getenv
-from agno.agent import Agent, RunResponse
+from agno.agent import Agent
 from agno.models.openai.like import OpenAILike
 
 import os
 from dotenv import load_dotenv
 
 from newsletter_agent.agent.prompts import NBA_WEB_SEARCH_PROMPT
-# from prompt import PROMPT
 
 load_dotenv()
 
