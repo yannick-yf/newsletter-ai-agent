@@ -1,4 +1,5 @@
 from newsletter_agent.utilis.get_date import get_date_of_yesterday
+from newsletter_agent.agent.agent_execution import agent_pipeline_execution
 
 def get_html_content():
     html_content = f"""
@@ -6,7 +7,7 @@ def get_html_content():
         <body>
             <h2>Hello!</h2>
             <p>This is an <b>HTML</b> email and the date of yesterday was {get_date_of_yesterday()}.</p>
-            <p>Visit <a href="https://www.python.org">Python.org</a></p>
+            <p> {agent_pipeline_execution()} <p>
         </body>
     </html>
     """
