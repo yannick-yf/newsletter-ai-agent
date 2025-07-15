@@ -5,7 +5,7 @@ on:
     branches:
       - '*'  # Runs on all branches
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *' # Runs every hour test
   workflow_dispatch:
 
 jobs:
